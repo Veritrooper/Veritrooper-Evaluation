@@ -1,72 +1,129 @@
-VERITROOPER SCOUT — EVALUATION LICENSE AGREEMENT
-=================================================
+VERITROOPER SCOUT — REPOSITORY NOTICE AND EVALUATION TERMS
+===========================================================
 
-This Evaluation License Agreement ("Agreement") governs your use of the
-VERITROOPER Scout evaluation/trial software and any accompanying files (the
-"Software"), provided by Veritrooper LLC ("Veritrooper"). By downloading,
-installing, or using the Software, you agree to these terms. If you do not
-agree, do not install or use the Software.
+IMPORTANT — READ BEFORE USING THIS REPOSITORY OR ANY EVALUATION SOFTWARE.
 
-1. LICENSE GRANT
-   Veritrooper grants you a limited, non-exclusive, non-transferable,
-   non-sublicensable, revocable license to install and use the Software
-   solely to evaluate it internally, subject to the trial limits built into
-   the Software (currently up to 250 questions per audit, 5 audits, and a
-   60-day period). No other use is licensed.
+This public repository currently contains informational documentation only.
+It does not contain VERITROOPER source code, an installer, an executable, an
+activation file, or a downloadable evaluation package. Access to this
+repository does not grant a licence to VERITROOPER software, source code,
+patents, trademarks, or other proprietary technology.
 
-2. RESTRICTIONS
-   You may not, and may not permit others to:
-   (a) sell, rent, lease, sublicense, distribute, publish, or otherwise make
-       the Software available to any third party;
-   (b) copy the Software except as necessary to install and run it for
-       evaluation;
-   (c) modify, adapt, translate, or create derivative works of it;
+If VERITROOPER LLC supplies VERITROOPER Scout evaluation software to you
+through a separate approved channel (the "Software"), the following terms
+govern that evaluation unless a separate written agreement signed by
+VERITROOPER LLC states otherwise. By installing, copying, or using the
+Software, you agree to these terms. If you do not agree, do not install or
+use the Software.
+
+1. LICENCE GRANT
+
+   VERITROOPER LLC grants you a limited, non-exclusive, non-transferable,
+   non-sublicensable, revocable licence to install and use the Software solely
+   for your internal evaluation, subject to the limits stated in the Software
+   and the documentation supplied with it. No production use is licensed.
+
+2. EVALUATION OUTPUT
+
+   Reports, evidence packages, findings, and other artefacts the Software
+   produces from your data belong to you. VERITROOPER LLC claims no ownership
+   of your data, your models, or your evaluation output. Output from a build
+   marked as an evaluation or trial build may be watermarked and may not be
+   represented as a production deliverable.
+
+3. RESTRICTIONS
+
+   You may not, and may not permit anyone else to:
+
+   (a) rent, lease, lend, sell, sublicense, distribute, publish, or provide
+       the Software or its functionality to a third party;
+   (b) copy the Software except as necessary to install and run it for the
+       licensed evaluation;
+   (c) modify, adapt, translate, or create derivative works of the Software;
    (d) reverse engineer, decompile, disassemble, or otherwise attempt to
-       derive the source code, algorithms, or internal workings of the
-       Software, except to the extent this restriction is prohibited by
-       applicable law;
-   (e) remove, alter, or obscure any proprietary notices, watermarks, or
-       trial markings;
-   (f) use the Software in production or for any purpose other than internal
-       evaluation.
+       derive its source code, algorithms, or internal workings, except to
+       the extent expressly permitted by applicable law or a third-party
+       component licence;
+   (e) remove, alter, or obscure any copyright, trademark, watermark, trial
+       marking, or other proprietary notice; or
+   (f) circumvent, disable, or tamper with any activation, volume, or expiry
+       limit.
 
-3. OWNERSHIP
-   The Software is licensed, not sold. Veritrooper retains all right, title,
-   and interest in and to the Software, including all intellectual property
-   rights. Patent pending (U.S. non-provisional application filed
-   05/22/2026). All rights not expressly granted are reserved.
+4. DATA, NETWORK USE, AND CREDENTIALS
 
-4. YOUR DATA AND KEYS
-   The Software runs on your machine. You are responsible for the documents
-   you audit and for any third-party AI provider accounts, API keys, usage,
-   and charges incurred when you run it. Veritrooper does not receive your
-   documents or your keys.
+   The Software runs on customer-controlled computers. VERITROOPER LLC does
+   not operate a service that receives your documents, prompts, audit results,
+   or API keys.
 
-5. TERM AND TERMINATION
-   This Agreement is effective until the trial limits are reached or it is
-   otherwise terminated. It terminates automatically if you breach any term.
-   On termination you must stop using and uninstall the Software.
+   Where the Software is operated locally or in an air-gapped configuration,
+   no customer corpus needs to be transmitted to VERITROOPER LLC. If you
+   deliberately configure a third-party cloud model or remote endpoint, the
+   data required for that call is sent to that selected provider using your
+   credentials and under that provider's terms. You are responsible for that
+   provider relationship, your credentials, usage charges, and determining
+   whether the transmission is permitted for your data.
 
-6. DISCLAIMER OF WARRANTY
-   THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF
-   ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
-   WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
-   NONINFRINGEMENT.
+5. PRODUCT BOUNDARIES
 
-7. LIMITATION OF LIABILITY
-   TO THE MAXIMUM EXTENT PERMITTED BY LAW, VERITROOPER WILL NOT BE LIABLE
-   FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY
-   DAMAGES, OR FOR ANY LOSS OF PROFITS, DATA, OR USE, ARISING OUT OF OR
-   RELATED TO THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY. VERITROOPER'S
-   TOTAL AGGREGATE LIABILITY UNDER THIS AGREEMENT WILL NOT EXCEED USD $100.
+   The Software is a measurement and evidence tool. It does not provide legal
+   advice, perform a conformity assessment, certify or confer compliance with
+   any law or standard, prove the absence of every error, or replace competent
+   human review. Findings, referrals, and refusals require interpretation by
+   an accountable person. Decisions made using the Software's output remain
+   your responsibility.
 
-8. GOVERNING LAW
-   This Agreement is governed by the laws of the State of Delaware, without
-   regard to its conflict-of-laws rules.
+6. OWNERSHIP
 
-9. ENTIRE AGREEMENT
-   This Agreement is the entire agreement between you and Veritrooper
-   regarding the Software and supersedes any prior understandings.
+   The Software is licensed, not sold. VERITROOPER LLC retains all right,
+   title, and interest in and to the Software and its intellectual property.
+   The Software is protected by copyright, trade-secret, trademark, and
+   patent law, including United States patent application 19/685,794. All
+   rights not expressly granted are reserved.
 
-(c) 2026 Veritrooper LLC. All rights reserved.
-Contact: brianb@veritrooper.com  ·  https://veritrooper.com
+7. THIRD-PARTY COMPONENTS
+
+   Evaluation software may incorporate third-party components governed by
+   their own licence terms. Those terms are supplied with the Software in
+   THIRD-PARTY-NOTICES.txt. Nothing in these terms limits rights granted by an
+   applicable third-party licence.
+
+8. TERM AND TERMINATION
+
+   These evaluation terms remain effective until the supplied evaluation
+   expires or is terminated. They terminate automatically if you breach them.
+   On termination, you must stop using and remove the Software. Evaluation
+   packages already produced remain yours, subject to the restrictions above.
+
+9. DISCLAIMER OF WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF
+   ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A
+   PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. VERITROOPER LLC DOES NOT
+   WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE OR UNINTERRUPTED, THAT IT WILL
+   DETECT EVERY DEFECT, OR THAT ITS OUTPUT WILL SATISFY A PARTICULAR REGULATOR,
+   ASSESSOR, OR COUNTERPARTY.
+
+10. LIMITATION OF LIABILITY
+
+   TO THE MAXIMUM EXTENT PERMITTED BY LAW, VERITROOPER LLC WILL NOT BE LIABLE
+   FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE
+   DAMAGES, OR FOR LOSS OF PROFITS, REVENUE, DATA, USE, OR GOODWILL, ARISING
+   OUT OF OR RELATED TO THE SOFTWARE OR THESE TERMS, EVEN IF ADVISED OF THE
+   POSSIBILITY. VERITROOPER LLC'S TOTAL AGGREGATE LIABILITY FOR AN EVALUATION
+   BUILD WILL NOT EXCEED THE AMOUNT YOU PAID FOR THAT BUILD. NOTHING EXCLUDES
+   LIABILITY THAT CANNOT LAWFULLY BE EXCLUDED.
+
+11. GENERAL
+
+   These terms are governed by the laws of the State of Delaware, without
+   regard to conflict-of-laws rules. You may not use or export the Software in
+   violation of United States export laws. If any provision is held
+   unenforceable, the remaining provisions continue in effect.
+
+12. CONTACT
+
+   VERITROOPER LLC
+   contact@veritrooper.com
+   https://veritrooper.com/contact/
+
+Copyright 2026 VeriTrooper LLC. All rights reserved.

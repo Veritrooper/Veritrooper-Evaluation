@@ -1,91 +1,55 @@
-VERITROOPER SCOUT — EVALUATION TRIAL
-=====================================
+# VeriTrooper Scout
 
-Measure how accurately an AI answers from your own documents — and get
-audit-ready proof of where, and why, it's wrong.
+**AI answer assurance for systems that must be right about your source material.**
 
-VERITROOPER Scout audits an AI system against YOUR data. You point it at your
-documents and a model — a frontier API (Claude, GPT, Gemini) or your own
-deployed endpoint — and Scout measures how accurately that model answers
-strictly from those documents. It then produces a report showing which
-answers were right, which were wrong, and the reason for each. Every result
-is checked by an independent, different-vendor verifier, so nothing confirms
-itself.
+VeriTrooper Scout tests an AI model or assistant against approved source material, identifies unsupported or incorrect answers, and produces a portable evidence package that engineers, reviewers, auditors, and accountable decision-makers can inspect.
 
-It runs entirely on your machine. Your documents and your API keys never
-leave your environment.
+> **No trial software is distributed from this repository.** This is an informational entry point only. It contains no source code, installer, executable, activation file, or downloadable evaluation package. Controlled evaluations are arranged directly with VeriTrooper.
 
---------------------------------------------------------------------------
-WHAT'S IN THE TRIAL
+## Explore VeriTrooper
 
-  - Up to 250 questions per audit
-  - 5 audits
-  - Active for 60 days
-  - Reports carry a "TRIAL VERSION" watermark
+- [Run the interactive Scout demonstration](https://veritrooper.com/demo/)
+- [Inspect a real, sanitized evidence package](https://veritrooper.com/evidence/)
+- [Review the assurance methodology](https://veritrooper.com/methodology/)
+- [Read the security and deployment overview](https://veritrooper.com/security/)
+- [Browse product documentation](https://veritrooper.com/docs/)
+- [Plan a guided enterprise pilot](https://veritrooper.com/pilot/)
+- [Contact VeriTrooper](https://veritrooper.com/contact/)
 
-The full version removes the caps and the watermark and unlocks the rest of
-the VERITROOPER suite. There's plenty here to run Scout on your own data and
-see the real output.
+## What Scout does
 
---------------------------------------------------------------------------
-DOWNLOAD & INSTALL  (Windows 64-bit)
+Scout evaluates whether an AI answers correctly from the material it is supposed to use.
 
-  1. Open the Releases page (right-hand sidebar) and download the latest
-     "Veritrooper Scout Trial Setup.zip".
-  2. Unzip it, then run "Veritrooper Scout Trial Setup.exe".
-  3. Windows SmartScreen may show an "unknown publisher" prompt — the trial
-     isn't code-signed yet. Click "More info", then "Run anyway".
-  4. Follow the installer, then launch "Veritrooper Scout (Trial)".
+1. **Establish ground truth** from approved documents, policies, records, tables, or other supported sources.
+2. **Test the AI under review** with a bounded, traceable question set.
+3. **Settle clear cases deterministically** where reproducible rules can reach a reliable verdict.
+4. **Route contested cases for independent review** rather than allowing the model under test to confirm itself.
+5. **Preserve every verdict and source** in a reviewable evidence package with integrity verification and human signoff.
 
---------------------------------------------------------------------------
-FIRST RUN — ADD YOUR API KEYS
+Scout is the pre-deployment checkpoint in the VeriTrooper assurance system:
 
-On first launch, Scout asks for your API keys:
+- **SitRep** examines whether source material is sound before an AI relies on it.
+- **Scout** tests whether an AI answers correctly before it ships.
+- **Watchtower** checks whether production answers remain reliable after deployment.
 
-  - Anthropic (Claude)
-  - OpenAI (GPT)
-  - Google (Gemini)
+## Evidence, not a dashboard score
 
-All three are used because Scout cross-checks every result across vendors —
-the model under test is verified by a DIFFERENT vendor, with a third as a
-tiebreaker on close calls. That independent check is what keeps a model from
-confirming its own answers.
+A completed Scout engagement can produce role-specific reports, per-finding records, source references, machine-readable results, run configuration, integrity material, and reviewer disposition. The public evidence page contains a sanitized report set from a real 1,000-question audit so prospective evaluators can inspect the form of the output before sharing private material.
 
-Your keys are stored locally on your machine only. They are never sent
-anywhere except directly to each provider's own API when you run an audit.
-Each field has a show/hide toggle so you can reveal a key to confirm you
-pasted it correctly.
+## Deployment and data boundary
 
---------------------------------------------------------------------------
-RUN AN AUDIT
+VeriTrooper is designed to run on customer-controlled infrastructure, including offline and air-gapped environments. Local operation does not require customer documents or audit results to be uploaded to VeriTrooper.
 
-  1. Choose what to audit — a frontier model, or your own deployed endpoint.
-  2. Select your document set and the model to test.
-  3. Deploy the audit.
+If an operator deliberately selects a cloud model or remote endpoint, the data required for that call is sent directly to the selected provider under that provider's terms and using the operator's credentials. VeriTrooper does not operate an intermediary service that receives the customer's audit corpus.
 
-Results save to  Documents\VERITROOPER Audits.  You get an accuracy
-measurement, the specific failures with plain-language explanations of what
-went wrong, and audit-ready documentation you can keep as evidence.
+## Controlled evaluation
 
---------------------------------------------------------------------------
-REQUIREMENTS
+Evaluations are provided through a guided, bounded process so that the system under review, approved sources, deployment boundary, success criteria, and responsible reviewers are defined before a run begins. Trial software and activation material are delivered only through an approved channel; they are not published on GitHub.
 
-  - Windows 10 / 11, 64-bit
-  - API keys for the providers you want to test and verify with
-  - Internet access (to reach the model providers' APIs)
+[Request a guided pilot](https://veritrooper.com/pilot/) or email [contact@veritrooper.com](mailto:contact@veritrooper.com).
 
-Nothing is installed system-wide beyond the app and its bundled engine;
-uninstall removes it cleanly.
+## Important boundaries
 
---------------------------------------------------------------------------
-THE FULL VERSION
+VeriTrooper supplies testing and governance evidence. It does not provide legal advice, perform a conformity assessment, certify compliance, prove the absence of every error, or replace accountable human review. A qualified person remains responsible for interpreting findings and approving decisions.
 
-Ready to run it without the caps, or want it on your own deployed assistant?
-
-  contact@veritrooper.com
-  https://veritrooper.com
-
---------------------------------------------------------------------------
-(c) 2026 Veritrooper LLC. Patent pending (non-provisional filed 05/22/2026).
-VERITROOPER Scout runs locally; it produces evidence of accuracy — it does
-not, by itself, confer regulatory compliance.
+Copyright 2026 VeriTrooper LLC. All rights reserved. Patent pending, including U.S. patent application 19/685,794.
