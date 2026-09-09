@@ -1,55 +1,38 @@
-# VeriTrooper Scout
+# VeriTrooper Evaluation Suite
 
-**AI answer assurance for systems that must be right about your source material.**
+VeriTrooper tests whether an AI workflow follows the source material and rules it was given, then produces a record a team or outside reviewer can inspect.
 
-VeriTrooper Scout tests an AI model or assistant against approved source material, identifies unsupported or incorrect answers, and produces a portable evidence package that engineers, reviewers, auditors, and accountable decision-makers can inspect.
+This repository is the official download page for the Windows Evaluation Suite. It includes VeriTrooper Scout, SitRep, and Watchtower, plus the supporting Governance Records workflow.
 
-> **No trial software is distributed from this repository.** This is an informational entry point only. It contains no source code, installer, executable, activation file, or downloadable evaluation package. Controlled evaluations are arranged directly with VeriTrooper.
+## Evaluation limits
 
-## Explore VeriTrooper
+- 14 days from the first real audit
+- 5 total runs shared across Scout, SitRep, and Watchtower
+- Up to 200 questions or evaluated interactions per run
+- Opening the application, configuring it, and creating a Watchtower deployment do not consume a run
 
-- [Run the interactive Scout demonstration](https://veritrooper.com/demo/)
-- [Inspect a real, sanitized evidence package](https://veritrooper.com/evidence/)
-- [Review the assurance methodology](https://veritrooper.com/methodology/)
-- [Read the security and deployment overview](https://veritrooper.com/security/)
-- [Browse product documentation](https://veritrooper.com/docs/)
-- [Plan a guided enterprise pilot](https://veritrooper.com/pilot/)
-- [Contact VeriTrooper](https://veritrooper.com/contact/)
+## Install
 
-## What Scout does
+Download these five files from the latest release and keep them together in one folder:
 
-Scout evaluates whether an AI answers correctly from the material it is supposed to use.
+1. `VERITROOPER Evaluation Suite Setup.exe`
+2. `VERITROOPER Evaluation Suite Setup-1.bin`
+3. `VERITROOPER Evaluation Suite Setup-2.bin`
+4. `VERITROOPER Evaluation Suite Setup-3.bin`
+5. `SHA256SUMS.txt`
 
-1. **Establish ground truth** from approved documents, policies, records, tables, or other supported sources.
-2. **Test the AI under review** with a bounded, traceable question set.
-3. **Settle clear cases deterministically** where reproducible rules can reach a reliable verdict.
-4. **Route contested cases for independent review** rather than allowing the model under test to confirm itself.
-5. **Preserve every verdict and source** in a reviewable evidence package with integrity verification and human signoff.
+Then verify the SHA-256 hashes and run `VERITROOPER Evaluation Suite Setup.exe`.
 
-Scout is the pre-deployment checkpoint in the VeriTrooper assurance system:
+This release candidate is not yet code-signed, so Windows may show **Unknown publisher**. Continue only when the downloaded hashes match `SHA256SUMS.txt`.
 
-- **SitRep** examines whether source material is sound before an AI relies on it.
-- **Scout** tests whether an AI answers correctly before it ships.
-- **Watchtower** checks whether production answers remain reliable after deployment.
+## What to try
 
-## Evidence, not a dashboard score
-
-A completed Scout engagement can produce role-specific reports, per-finding records, source references, machine-readable results, run configuration, integrity material, and reviewer disposition. The public evidence page contains a sanitized report set from a real 1,000-question audit so prospective evaluators can inspect the form of the output before sharing private material.
-
-## Deployment and data boundary
-
-VeriTrooper is designed to run on customer-controlled infrastructure, including offline and air-gapped environments. Local operation does not require customer documents or audit results to be uploaded to VeriTrooper.
-
-If an operator deliberately selects a cloud model or remote endpoint, the data required for that call is sent directly to the selected provider under that provider's terms and using the operator's credentials. VeriTrooper does not operate an intermediary service that receives the customer's audit corpus.
-
-## Controlled evaluation
-
-Evaluations are provided through a guided, bounded process so that the system under review, approved sources, deployment boundary, success criteria, and responsible reviewers are defined before a run begins. Trial software and activation material are delivered only through an approved channel; they are not published on GitHub.
-
-[Request a guided pilot](https://veritrooper.com/pilot/) or email [contact@veritrooper.com](mailto:contact@veritrooper.com).
+Bring one real AI workflow and the source material it should follow. VeriTrooper will test the workflow, show what holds up or falls short, and produce evidence you can use in a review.
 
 ## Important boundaries
 
 VeriTrooper supplies testing and governance evidence. It does not provide legal advice, perform a conformity assessment, certify compliance, prove the absence of every error, or replace accountable human review. A qualified person remains responsible for interpreting findings and approving decisions.
 
-Copyright 2026 VeriTrooper LLC. All rights reserved. Patent pending, including U.S. patent application 19/685,794.
+Questions or evaluation feedback: brianb@veritrooper.com
+
+[Learn more at veritrooper.com](https://veritrooper.com/)
