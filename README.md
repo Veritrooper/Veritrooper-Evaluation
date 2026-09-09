@@ -13,13 +13,14 @@ This repository is the official download page for the Windows Evaluation Suite. 
 
 ## Install
 
-Download these five files from the latest release and keep them together in one folder:
+Open the [latest release](https://github.com/Veritrooper/Veritrooper-Evaluation/releases/latest) and download the .exe, all three numbered .bin files, SHA256SUMS.txt, and the installation instructions. Keep them together in one folder.
 
-1. `VERITROOPER Evaluation Suite Setup.exe`
-2. `VERITROOPER Evaluation Suite Setup-1.bin`
-3. `VERITROOPER Evaluation Suite Setup-2.bin`
-4. `VERITROOPER Evaluation Suite Setup-3.bin`
-5. `SHA256SUMS.txt`
+GitHub changes spaces in uploaded asset names to periods. Before running setup, rename the four installer files as follows:
+
+1. `VERITROOPER.Evaluation.Suite.Setup.exe` to `VERITROOPER Evaluation Suite Setup.exe`
+2. `VERITROOPER.Evaluation.Suite.Setup-1.bin` to `VERITROOPER Evaluation Suite Setup-1.bin`
+3. `VERITROOPER.Evaluation.Suite.Setup-2.bin` to `VERITROOPER Evaluation Suite Setup-2.bin`
+4. `VERITROOPER.Evaluation.Suite.Setup-3.bin` to `VERITROOPER Evaluation Suite Setup-3.bin`
 
 Then verify the SHA-256 hashes and run `VERITROOPER Evaluation Suite Setup.exe`.
 
