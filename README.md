@@ -13,7 +13,7 @@ This repository is the official download page for the Windows Evaluation Suite. 
 
 ## Install
 
-Open the [latest release](https://github.com/Veritrooper/Veritrooper-Evaluation/releases/latest) and download the .exe, all three numbered .bin files, SHA256SUMS.txt, and the installation instructions. Keep them together in one folder.
+Open the [latest release](https://github.com/Veritrooper/Veritrooper-Evaluation/releases/tag/rc30-evaluation) and download the .exe, all three numbered .bin files, SHA256SUMS.txt, and the installation instructions. Keep them together in one folder.
 
 GitHub changes spaces in uploaded asset names to periods. Before running setup, rename the four installer files as follows:
 
