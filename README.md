@@ -17,7 +17,7 @@ the complete protected application resources, including the local Selene model.
 Keep the complete folder together and run only
 `VERITROOPER Evaluation Setup.exe`.
 
-Open the [latest release](https://github.com/Veritrooper/Veritrooper-Evaluation/releases/latest)
+Open the [RC35 release](https://github.com/Veritrooper/Veritrooper-Evaluation/releases/tag/rc35-evaluation)
 for the official download location, published checksums, installation steps,
 and signing status.
 
