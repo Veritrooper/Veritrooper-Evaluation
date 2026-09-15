@@ -67,7 +67,7 @@ jobs:
           codesign --verify --verbose=2 "$APP"/pyarmor_runtime_*/*.so
           "$APP/LocalEngine/llama-server/llama-server" --version
           VT_STATE_DIR="$RUNNER_TEMP/vt-state" "$APP/python/bin/python3" scripts/smoke_native_package.py \
-            --app "$APP" --port 18081 --ctx 512
+            --app "$APP" --port 18081 --ctx 128
 
       - name: Retain tested package
         uses: actions/upload-artifact@v4

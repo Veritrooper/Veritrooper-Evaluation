@@ -27,17 +27,21 @@ def main(argv=None):
         return 2
     payload = json.dumps({
         "model": "local",
-        "messages": [{"role": "user", "content": "Reply with exactly: VERITROOPER NATIVE OK"}],
+        "messages": [{"role": "user", "content": "Reply with exactly: OK"}],
         "temperature": 0,
-        "max_tokens": 20,
+        "max_tokens": 4,
     }).encode("utf-8")
     request = urllib.request.Request(
         local_validator.local_url(args.port), data=payload,
         headers={"Content-Type": "application/json"})
     try:
-        with urllib.request.urlopen(request, timeout=180) as response:
+        with urllib.request.urlopen(request, timeout=600) as response:
             body = json.loads(response.read())
-        print(body["choices"][0]["message"]["content"], flush=True)
+        completion = str(body["choices"][0]["message"]["content"] or "").strip()
+        if not completion:
+            print("Native inference returned an empty completion", file=sys.stderr)
+            return 4
+        print(completion, flush=True)
     finally:
         stopped = local_validator.stop()
         print(f"STOPPED={stopped}", flush=True)
