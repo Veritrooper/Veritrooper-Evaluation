@@ -1,0 +1,4 @@
+# Always-imported/runtime dependencies.
+requests==2.34.2
+fpdf2==2.8.7
+cryptography==50.0.1

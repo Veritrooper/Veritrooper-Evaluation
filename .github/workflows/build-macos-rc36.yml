@@ -1,0 +1,77 @@
+name: Build and test macOS RC36
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/build-macos-rc36.yml
+      - payload/**
+      - requirements/**
+      - scripts/**
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: ${{ matrix.label }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: Apple Silicon
+            runner: macos-15
+            target: darwin.arm64
+            machine: arm64
+            stage: payload/darwin-arm64
+          - label: Intel
+            runner: macos-15-intel
+            target: darwin.x86_64
+            machine: x86_64
+            stage: payload/darwin-x86_64
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Verify runner architecture
+        run: test "$(uname -m)" = "${{ matrix.machine }}"
+
+      - name: Retrieve approved offline model
+        run: |
+          python3 -m pip install remotezip==0.12.6
+          python3 scripts/extract_model_from_rc35.py \
+            --url https://pub-9cb04876f6974621af1364971fc6efc4.r2.dev/evaluation/rc35/VERITROOPER-Evaluation-RC35.zip \
+            --output "$RUNNER_TEMP/selene.gguf"
+
+      - name: Build native distribution
+        run: |
+          mkdir -p "$RUNNER_TEMP/vt-cache" "$RUNNER_TEMP/vt-output"
+          python3 scripts/build_native_evaluation_package.py \
+            --target "${{ matrix.target }}" \
+            --stage "${{ matrix.stage }}" \
+            --model "$RUNNER_TEMP/selene.gguf" \
+            --requirements-root "$GITHUB_WORKSPACE" \
+            --output "$RUNNER_TEMP/vt-output" \
+            --cache "$RUNNER_TEMP/vt-cache"
+
+      - name: Native protected runtime and inference test
+        run: |
+          PACKAGE="$RUNNER_TEMP/vt-output/VERITROOPER-Evaluation-RC36-${{ matrix.target }}"
+          APP="$PACKAGE/Resources/Application"
+          "$APP/python/bin/python3" -c "import sys; sys.path.insert(0, '$APP'); import engine.trial, _webui.server; print('PROTECTED_IMPORTS_OK')"
+          codesign --verify --verbose=2 "$APP"/pyarmor_runtime_*/*.so
+          "$APP/LocalEngine/llama-server/llama-server" --version
+          VT_STATE_DIR="$RUNNER_TEMP/vt-state" "$APP/python/bin/python3" scripts/smoke_native_package.py \
+            --app "$APP" --port 18081 --ctx 512
+
+      - name: Retain tested package
+        uses: actions/upload-artifact@v4
+        with:
+          name: VERITROOPER-Evaluation-RC36-${{ matrix.target }}
+          path: ${{ runner.temp }}/vt-output/*.zip
+          compression-level: 0
+          retention-days: 3
+          if-no-files-found: error

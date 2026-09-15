@@ -1,0 +1,7 @@
+# Complete unlocked source-development feature set. Direct dependencies remain
+# exact-pinned; requirements/constraints.txt locks the resolved transitive set.
+-r core.in
+-r providers.in
+-r documents.in
+-r semantic.in
+

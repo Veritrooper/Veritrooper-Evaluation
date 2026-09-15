@@ -1,0 +1,13 @@
+{
+  "schema": 2,
+  "edition": "Evaluation Suite",
+  "scope": "suite",
+  "max_questions": 200,
+  "max_audits": 5,
+  "expiry_days": 14,
+  "products": [
+    "scout",
+    "sitrep",
+    "watchtower"
+  ]
+}

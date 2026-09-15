@@ -1,0 +1,224 @@
+==============================================================================
+  VERITROOPER — END USER LICENCE AGREEMENT
+==============================================================================
+
+  IMPORTANT — READ BEFORE INSTALLING OR USING THIS SOFTWARE.
+
+  This End User Licence Agreement ("Agreement") is a legal agreement between
+  you (an individual or a single legal entity, "you") and VERITROOPER LLC, a
+  Delaware limited liability company ("VERITROOPER", "we", "us").
+
+  By installing, copying, or using the VERITROOPER software (the "Software"),
+  you agree to be bound by this Agreement. If you do not agree, do not install
+  or use the Software.
+
+
+------------------------------------------------------------------------------
+1. WHAT YOU MAY DO
+------------------------------------------------------------------------------
+
+1.1  Licence grant. Subject to this Agreement and to payment of any applicable
+     fees, we grant you a non-exclusive, non-transferable, non-sublicensable
+     licence to install and use the Software on computers you own or control,
+     for your internal business purposes.
+
+1.2  Your audits are yours. Every report, evidence package, finding, and
+     artefact the Software produces from your data belongs to YOU. We claim no
+     ownership of your data, your models, or the output of your audits, and we
+     assert no licence over them. You may use, publish, and disclose them
+     freely, including to your customers, your auditors and your regulators.
+
+1.3  Evaluation ("Trial") builds. A build marked as an evaluation build is
+     licensed for evaluation only. It is limited on volume, not on capability,
+     and it watermarks every document it produces. You may not remove,
+     obscure, or circumvent that watermark, and you may not use its output as
+     a production deliverable.
+
+
+------------------------------------------------------------------------------
+2. WHAT YOU MAY NOT DO
+------------------------------------------------------------------------------
+
+You may not, and may not permit anyone else to:
+
+2.1  Reverse engineer, decompile, disassemble, or attempt to derive the source
+     code of the Software, except to the extent that this restriction is
+     expressly prohibited by applicable law, or as permitted by the licence of
+     a third-party component (see section 8).
+
+2.2  Rent, lease, lend, sell, sublicense, or provide the Software to third
+     parties as a service, or otherwise make its functionality available to
+     anyone other than your own personnel.
+
+2.3  Remove or alter any notice of copyright, trademark, watermark, or other
+     proprietary marking in the Software or in the documents it produces.
+
+2.4  Circumvent, disable, or tamper with any licensing, volume, or expiry
+     limit in an evaluation build.
+
+
+------------------------------------------------------------------------------
+3. YOUR DATA — WHAT THE SOFTWARE DOES AND DOES NOT DO WITH IT
+------------------------------------------------------------------------------
+
+3.1  We operate no service. The Software runs entirely on your computers. It
+     does not transmit your data, your prompts, your documents, or your audit
+     results to VERITROOPER. We cannot see them, and we do not collect them.
+
+3.2  Air-gapped operation. Where the Software offers an air-gapped mode, every
+     model role runs on a model hosted on your own machine, and no claim,
+     question, or passage leaves that host. The evidence package records which
+     mode was used, so a reader can determine it from the artefact itself.
+
+3.3  Cloud model endpoints. If you configure the Software to use a third-party
+     model (for example OpenAI, Anthropic, or Google), then your data is sent
+     to THAT provider, using YOUR credentials, under THEIR terms. That
+     transmission is between you and them. We are not a party to it, we do not
+     control it, and we accept no responsibility for it. Satisfying yourself
+     that such transmission is lawful and permitted for your data is your
+     responsibility.
+
+3.4  API keys and credentials. Credentials you enter are stored on your
+     machine for the Software's use. Protecting them is your responsibility.
+
+
+------------------------------------------------------------------------------
+4. WHAT THE SOFTWARE IS — AND IS NOT
+------------------------------------------------------------------------------
+
+     This section is not boilerplate. It is the honest boundary of the
+     product, and you should read it before relying on the output.
+
+4.1  It is a measurement tool. The Software measures the accuracy of an AI
+     system against material you supply, and the internal consistency of that
+     material. Its findings are evidence about what it examined.
+
+4.2  It does not confer compliance. An audit performed with the Software does
+     NOT by itself constitute, certify, or confer conformity with any law,
+     regulation, or standard — including the EU AI Act. Where the Software
+     produces documents mapped to a regulatory framework, those documents are
+     TESTING EVIDENCE that may support a conformity assessment performed by
+     you or by a qualified assessor. They do not replace it.
+
+4.3  It does not eliminate error. No audit tool can prove the absence of every
+     error. The Software reports what it examined and states the limits of
+     that examination; an absence of findings is a conclusion about what was
+     looked at, and nothing more.
+
+4.4  Human review is part of the design. Where the Software cannot settle a
+     question, it says so and refers the item to a human rather than guessing.
+     Text recovered by OCR from a scanned image is DERIVED evidence; the page
+     image remains the record. Findings, referrals, and refusals are for a
+     competent person to act on. The Software supports professional judgement;
+     it does not replace it.
+
+4.5  You remain responsible. Decisions you take on the basis of the Software's
+     output — including decisions about deploying, restricting, or certifying
+     an AI system — are yours.
+
+
+------------------------------------------------------------------------------
+5. NO WARRANTY
+------------------------------------------------------------------------------
+
+5.1  THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF
+     ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
+     WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE,
+     AND NON-INFRINGEMENT.
+
+5.2  We do not warrant that the Software will be error-free or uninterrupted,
+     that it will detect every defect in any AI system or body of data, or
+     that its output will meet the requirements of any particular regulator,
+     assessor, or counterparty.
+
+5.3  Some jurisdictions do not allow the exclusion of implied warranties, so
+     some of the above may not apply to you.
+
+
+------------------------------------------------------------------------------
+6. LIMITATION OF LIABILITY
+------------------------------------------------------------------------------
+
+6.1  TO THE MAXIMUM EXTENT PERMITTED BY LAW, VERITROOPER SHALL NOT BE LIABLE
+     FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
+     DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL, ARISING
+     OUT OF OR RELATING TO THIS AGREEMENT OR THE SOFTWARE, EVEN IF ADVISED OF
+     THE POSSIBILITY OF SUCH DAMAGES.
+
+6.2  OUR TOTAL AGGREGATE LIABILITY ARISING OUT OF OR RELATING TO THIS
+     AGREEMENT OR THE SOFTWARE SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE
+     SOFTWARE IN THE TWELVE (12) MONTHS PRECEDING THE EVENT GIVING RISE TO THE
+     CLAIM. FOR AN EVALUATION BUILD, THAT AMOUNT IS ZERO.
+
+6.3  Nothing in this Agreement excludes or limits liability that cannot
+     lawfully be excluded or limited.
+
+
+------------------------------------------------------------------------------
+7. OWNERSHIP
+------------------------------------------------------------------------------
+
+7.1  The Software is licensed, not sold. VERITROOPER LLC retains all right,
+     title, and interest in and to the Software, including all intellectual
+     property rights in it. The Software is protected by copyright, trade
+     secret, and patent law, including United States patent application
+     19/685,794.
+
+7.2  Nothing in this Agreement transfers to you any right in the Software
+     other than the licence expressly granted in section 1.
+
+
+------------------------------------------------------------------------------
+8. THIRD-PARTY COMPONENTS
+------------------------------------------------------------------------------
+
+8.1  The Software incorporates third-party open-source components. Each is
+     licensed to you under its own terms, which are reproduced in full in
+     THIRD-PARTY-NOTICES.txt, distributed with the Software.
+
+8.2  Nothing in this Agreement limits any right you have under those licences.
+     Where a component is licensed under weak-copyleft terms (for example the
+     LGPL or the MPL), you have the right to modify or replace that component
+     in your installation, and we affirm it. Those components are shipped
+     unmodified and are not obfuscated.
+
+
+------------------------------------------------------------------------------
+9. TERM AND TERMINATION
+------------------------------------------------------------------------------
+
+9.1  This Agreement takes effect when you install the Software and continues
+     until terminated.
+
+9.2  It terminates automatically if you breach it. An evaluation licence also
+     expires according to the limits stated in the evaluation build's README.
+
+9.3  On termination you must stop using the Software and remove it from your
+     systems. Audit packages you have already produced remain yours (section
+     1.2), and sections 3, 4, 5, 6, 7 and 8 survive termination.
+
+
+------------------------------------------------------------------------------
+10. GENERAL
+------------------------------------------------------------------------------
+
+10.1 Governing law. This Agreement is governed by the laws of the State of
+     Delaware, without regard to its conflict-of-laws rules.
+
+10.2 Export. You may not use or export the Software in violation of United
+     States export laws.
+
+10.3 Entire agreement. This Agreement, together with THIRD-PARTY-NOTICES.txt,
+     is the entire agreement between you and us regarding the Software, and
+     supersedes any prior understanding. If any provision is held
+     unenforceable, the remainder continues in effect.
+
+10.4 Contact.
+
+         VERITROOPER LLC
+         brianb@veritrooper.com
+
+
+==============================================================================
+  VERITROOPER (c) 2026 VERITROOPER LLC. All rights reserved.
+==============================================================================

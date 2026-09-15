@@ -1,0 +1,12 @@
+{
+  "schema": 2,
+  "name": "VERITROOPER Evaluation Suite",
+  "edition": "Evaluation Suite",
+  "evaluation": true,
+  "utilities": [
+    "scout",
+    "sitrep",
+    "watchtower",
+    "orders"
+  ]
+}

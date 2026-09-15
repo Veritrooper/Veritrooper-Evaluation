@@ -1,0 +1,7 @@
+# Optional hosted-model and cloud-provider adapters (imported lazily).
+anthropic==0.96.0
+openai==2.32.0
+google-genai==1.73.1
+boto3==1.43.40
+google-auth==2.49.2
+

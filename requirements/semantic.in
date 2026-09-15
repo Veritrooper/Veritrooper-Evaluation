@@ -1,0 +1,4 @@
+# Optional PEDANT semantic-equivalence classifier runtime. The model bundle and
+# NLTK WordNet data are staged separately; see engine/answer_equivalence.py.
+scikit-learn==1.8.0
+

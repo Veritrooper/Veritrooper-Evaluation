@@ -1,0 +1,15 @@
+# Optional document, presentation, structured-data, and OCR readers.
+beautifulsoup4==4.14.3
+dbfread==2.0.7
+duckdb==1.5.4
+h5py==3.16.0
+numpy==2.4.3
+openpyxl==3.1.5
+pillow==12.3.0
+pypdf==6.17.0
+pypdfium2==5.8.0
+pytesseract==0.3.13
+python-docx==1.2.0
+python-pptx==1.0.2
+striprtf==0.0.32
+xlrd==2.0.2

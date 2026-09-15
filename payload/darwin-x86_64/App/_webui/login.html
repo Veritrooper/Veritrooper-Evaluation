@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VERITROOPER console — sign in</title>
+<style>
+/* Deliberately self-contained and small. This page is served to someone who has
+   not proved who they are yet, so it loads nothing, links nothing and reveals
+   nothing about the installation beyond the machine name it is running on. */
+:root{
+  color-scheme:dark;
+  --ink:#0B0E14; --s1:#12161F; --s2:#1A1F2B; --s3:#232936;
+  --line:#2B3242; --t1:#F4F1E8; --t2:#A9B0C0; --t3:#6E7688;
+  --gold:#ECC873; --gold-deep:#C98519; --gold-dim:#8A6A1E;
+  --crit:#E5534B; --good:#3FB950;
+  --sans:"Arimo","Liberation Sans",Segoe UI,Roboto,Arial,sans-serif;
+}
+:root[data-theme="light"],
+@media (prefers-color-scheme:light){}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--ink);color:var(--t1);
+  font:15px/1.55 var(--sans);-webkit-font-smoothing:antialiased;
+  display:flex;align-items:center;justify-content:center;padding:24px}
+.card{width:100%;max-width:420px;background:var(--s1);border:1px solid var(--line);
+  border-radius:14px;padding:28px 26px 22px}
+h1{margin:0 0 2px;font-size:20px;font-variant:small-caps;letter-spacing:.04em;color:var(--gold)}
+.sub{font-size:12.5px;color:var(--t3);margin-bottom:20px}
+label{display:block;font-size:12.5px;color:var(--t2);margin:14px 0 5px}
+input{width:100%;background:var(--ink);color:var(--t1);border:1px solid var(--line);
+  border-radius:8px;padding:9px 11px;font:inherit}
+input:focus{outline:none;border-color:var(--gold-dim)}
+button{width:100%;margin-top:20px;font:inherit;font-weight:600;cursor:pointer;
+  background:var(--gold);color:#1A1407;border:1px solid var(--gold-deep);
+  border-radius:8px;padding:10px 12px}
+button:disabled{opacity:.55;cursor:default}
+.msg{margin-top:14px;font-size:13px;padding:9px 11px;border-radius:8px;display:none}
+.msg.bad{display:block;color:var(--crit);background:#E5534B18;border:1px solid #E5534B44}
+.note{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:11.5px;color:var(--t3);line-height:1.6}
+.fp{font-family:ui-monospace,Consolas,monospace;font-size:10.5px;color:var(--t2);
+  word-break:break-all;display:block;margin-top:5px}
+.warn{color:#D6A100}
+</style>
+</head>
+<body>
+<form class="card" id="f" autocomplete="on">
+  <h1>VERITROOPER</h1>
+  <div class="sub" id="where">console</div>
+
+  <label for="u">Account</label>
+  <input id="u" name="username" autocomplete="username" autocapitalize="none"
+         spellcheck="false" autofocus required>
+
+  <label for="p">Password</label>
+  <input id="p" name="password" type="password" autocomplete="current-password" required>
+
+  <button id="go" type="submit">Sign in</button>
+  <div class="msg" id="m"></div>
+
+  <div class="note" id="note"></div>
+</form>
+
+<script>
+const $ = s => document.querySelector(s);
+
+// What this installation is, so the person can tell they are at the right console
+// — and, when the connection is self-signed, the fingerprint they were told to
+// check. Both are public facts; nothing here is gated behind the login it sits in
+// front of.
+fetch("/api/session", {cache:"no-store"}).then(r => r.json()).then(d => {
+  if (d.server_name) $("#where").textContent = "console on " + d.server_name;
+  const bits = [];
+  if (d.tls === false) {
+    bits.push('<span class="warn">This connection is not encrypted.</span> ' +
+      'It is fine on this machine; on a network, ask whoever installed the console ' +
+      'to give it a certificate.');
+  } else if (d.fingerprint) {
+    bits.push('Your browser warned you about this certificate because the console ' +
+      'issued it itself — there is no public authority for a machine inside your ' +
+      'network. Check this against the fingerprint your administrator posted:' +
+      '<span class="fp">' + d.fingerprint + '</span>');
+  }
+  if (bits.length) $("#note").innerHTML = bits.join("<br><br>");
+}).catch(() => {});
+
+$("#f").addEventListener("submit", async e => {
+  e.preventDefault();
+  const m = $("#m"), go = $("#go");
+  m.className = "msg"; go.disabled = true; go.textContent = "Signing in…";
+  try {
+    const r = await fetch("/api/session", {
+      method: "POST", cache: "no-store",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({name: $("#u").value, password: $("#p").value})
+    });
+    const d = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(d.error || ("HTTP " + r.status));
+    location.replace("/");
+  } catch (err) {
+    m.textContent = err.message;
+    m.className = "msg bad";
+    $("#p").value = ""; $("#p").focus();
+    go.disabled = false; go.textContent = "Sign in";
+  }
+});
+</script>
+</body>
+</html>
