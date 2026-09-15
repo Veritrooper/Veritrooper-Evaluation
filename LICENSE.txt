@@ -1,16 +1,17 @@
-VERITROOPER SCOUT — REPOSITORY NOTICE AND EVALUATION TERMS
-===========================================================
+VERITROOPER EVALUATION SUITE REPOSITORY NOTICE AND EVALUATION TERMS
+===================================================================
 
-IMPORTANT — READ BEFORE USING THIS REPOSITORY OR ANY EVALUATION SOFTWARE.
+IMPORTANT: READ BEFORE USING THIS REPOSITORY OR ANY EVALUATION SOFTWARE.
 
-This public repository currently contains informational documentation only.
-It does not contain VERITROOPER source code, an installer, an executable, an
-activation file, or a downloadable evaluation package. Access to this
-repository does not grant a licence to VERITROOPER software, source code,
-patents, trademarks, or other proprietary technology.
+The source tree of this public repository contains informational documentation
+only. The evaluation package is distributed through the approved release
+channel linked from this repository. The repository does not contain
+VERITROOPER source code or an activation file. Access to this repository does
+not grant a licence to VERITROOPER software, source code, patents, trademarks,
+or other proprietary technology.
 
-If VERITROOPER LLC supplies VERITROOPER Scout evaluation software to you
-through a separate approved channel (the "Software"), the following terms
+If VERITROOPER LLC supplies the VERITROOPER Evaluation Suite to you through an
+approved release channel (the "Software"), the following terms
 govern that evaluation unless a separate written agreement signed by
 VERITROOPER LLC states otherwise. By installing, copying, or using the
 Software, you agree to these terms. If you do not agree, do not install or
