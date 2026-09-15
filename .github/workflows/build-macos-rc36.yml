@@ -60,7 +60,8 @@ jobs:
 
       - name: Native protected runtime and inference test
         run: |
-          PACKAGE="$RUNNER_TEMP/vt-output/VERITROOPER-Evaluation-RC36-${{ matrix.target }}"
+          TARGET="${{ matrix.target }}"
+          PACKAGE="$RUNNER_TEMP/vt-output/VERITROOPER-Evaluation-RC36-${TARGET//./-}"
           APP="$PACKAGE/Resources/Application"
           "$APP/python/bin/python3" -c "import sys; sys.path.insert(0, '$APP'); import engine.trial, _webui.server; print('PROTECTED_IMPORTS_OK')"
           codesign --verify --verbose=2 "$APP"/pyarmor_runtime_*/*.so
