@@ -41,8 +41,9 @@ jobs:
 
       - name: Retrieve approved offline model
         run: |
-          python3 -m pip install remotezip==0.12.6
-          python3 scripts/extract_model_from_rc35.py \
+          python3 -m venv "$RUNNER_TEMP/bootstrap-venv"
+          "$RUNNER_TEMP/bootstrap-venv/bin/python" -m pip install remotezip==0.12.6
+          "$RUNNER_TEMP/bootstrap-venv/bin/python" scripts/extract_model_from_rc35.py \
             --url https://pub-9cb04876f6974621af1364971fc6efc4.r2.dev/evaluation/rc35/VERITROOPER-Evaluation-RC35.zip \
             --output "$RUNNER_TEMP/selene.gguf"
 
