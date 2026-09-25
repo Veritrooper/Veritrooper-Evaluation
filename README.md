@@ -9,18 +9,35 @@ SitRep, Watchtower, and the supporting Governance Records workflow.
 
 ## Current release
 
-The current Windows evaluation release is **RC35**. Native Linux and macOS
-evaluation previews are available as **RC36**.
+The current Windows evaluation is **RC38, an unsigned prerelease**. Microsoft
+public-trust validation remains **In Progress**, so Windows may show **Unknown
+publisher**. Clean independent Windows installation, missing/corrupt-resource
+handling, upgrade, and evidence-preserving uninstall acceptance remain pending
+for this exact package.
+
+A separate unsigned **RC38 Linux x86_64 preview** is available for Ubuntu 24.04.
+Mac RC38 packages are not available; the existing **RC36 macOS and Linux
+previews** remain available.
 
 Each platform is distributed as one complete ZIP64 archive. The extracted
 folder contains one root installer, installation instructions, checksum
 manifests, and the complete protected application resources, including the
 local Selene model. Keep the root installer and `Resources` folder together.
 
-Open the [RC36 cross-platform release](https://github.com/Veritrooper/Veritrooper-Evaluation/releases/tag/rc36-cross-platform)
-for all official download locations, published checksums, installation steps,
-and signing status. The existing [RC35 Windows release](https://github.com/Veritrooper/Veritrooper-Evaluation/releases/tag/rc35-evaluation)
-remains available and unchanged.
+Open the [RC38 Windows release](https://github.com/Veritrooper/Veritrooper-Evaluation/releases/tag/rc38-evaluation)
+for the complete download, published checksum, changes, installation steps,
+and acceptance limitations.
+
+- [Download Windows RC38](https://pub-9cb04876f6974621af1364971fc6efc4.r2.dev/evaluation/rc38/VERITROOPER-Evaluation-RC38.zip)
+- [Windows RC38 SHA256 checksum](https://pub-9cb04876f6974621af1364971fc6efc4.r2.dev/evaluation/rc38/VERITROOPER-Evaluation-RC38.zip.sha256.txt)
+- [Download the separate Linux RC38 preview](https://pub-9cb04876f6974621af1364971fc6efc4.r2.dev/evaluation/rc38-preview/linux/VERITROOPER-Evaluation-RC38-linux-x86_64.zip)
+- [Linux RC38 preview SHA256 checksum](https://pub-9cb04876f6974621af1364971fc6efc4.r2.dev/evaluation/rc38-preview/linux/VERITROOPER-Evaluation-RC38-linux-x86_64.zip.sha256.txt)
+- [Existing RC36 macOS and Linux previews](https://github.com/Veritrooper/Veritrooper-Evaluation/releases/tag/rc36-cross-platform)
+- [Earlier Windows RC35 release](https://github.com/Veritrooper/Veritrooper-Evaluation/releases/tag/rc35-evaluation)
+
+RC38 improves report consistency, evidence-gate enforcement, execution identity,
+and monitoring panel separation. Evaluation reports describe withheld
+machine-readable records. These changes do not establish new benchmark scores.
 
 ## Evaluation limits
 
@@ -45,11 +62,13 @@ installing. Installation stops if any required file is missing, incomplete, or
 altered. No internet connection is required for installation or the local audit
 path.
 
-Windows RC35 and Linux RC36 are currently unsigned. The macOS packages are ad
-hoc signed for build integrity but are not Apple Developer ID signed or
-notarized. Use only the official downloads and confirm the published SHA256
-before installation. Scanned image-only OCR requires a native Tesseract
-installation in the macOS and Linux preview.
+Windows RC38, earlier Windows RC35, and the Linux previews are unsigned. The
+RC36 macOS packages are ad hoc signed for build integrity but are not Apple
+Developer ID signed or notarized. Use only the official downloads and confirm
+the published SHA256 before installation. A matching checksum identifies the
+published package; it does not provide a trusted publisher signature. Scanned
+image-only OCR requires a native Tesseract installation in the macOS and Linux
+previews.
 
 ## What to try
 
