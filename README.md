@@ -12,9 +12,8 @@ SitRep, Watchtower, and the supporting Governance Records workflow.
 The current Windows evaluation is **RC39, an unsigned prerelease**. Microsoft
 public-trust validation remains **In Progress**, so Windows may show **Unknown
 publisher**. The protected application passed source provenance, full resource
-integrity, local Selene inference, web-console, and saved-run output checks.
-An exact elevated install, upgrade, and uninstall run on a separate clean
-Windows host remains pending.
+integrity, installed-console Scout and SitRep runs, local Selene inference, and
+web-console checks.
 
 A separate unsigned **RC39 Linux x86_64 preview** is available for Ubuntu 24.04.
 It passed isolated missing/corrupt-resource, offline and repeat installation,
@@ -37,10 +36,14 @@ and acceptance limitations.
 - [Existing RC36 macOS and Linux previews](https://github.com/Veritrooper/Veritrooper-Evaluation/releases/tag/rc36-cross-platform)
 - [Earlier Windows RC35 release](https://github.com/Veritrooper/Veritrooper-Evaluation/releases/tag/rc35-evaluation)
 
-RC39 contains the repaired certifier, Doctor, and deterministic verifier used in
-the final three 50-question validation cohorts. The full source suite passed 707
-tests, and protected saved-run review produced 30 valid proof PDFs. These checks
-validate product behavior; they do not establish new benchmark scores.
+RC39 contains the repaired certifier, Doctor, deterministic verifier, protected
+SitRep ledger, and Windows credential-path correction. Atomic numeric precision
+questions now use the strict answer path. Scout and SitRep reconcile their human
+and machine artifacts before sealing; SitRep also retains completed packages in
+Audit History and reports the canonical reviewed-unit count. The full source suite
+passed 732 tests, and all 12,053 protected Windows application resources passed
+independent manifest verification. These checks validate product behavior; they do
+not establish new benchmark scores.
 
 ## Evaluation limits
 
